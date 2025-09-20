@@ -1,0 +1,93 @@
+# Dependencies
+node_modules/
+
+# Expo / builds
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+.vscode/
+.cursor/
+
+# Native builds
+/ios
+/android
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# Debug logs
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# OS files
+.DS_Store
+
+# Certs (never commit)
+*.pem
+
+# Env
+.env
+.env*.local
+.env.*
+
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Editors
+.vscode/
+.cursor/
+
+# Native
+/ios
+/android
+
+# Env
+.env
+.env*.local
+.env.*
+
+# OS
+.DS_Store
+
+# --- Dependencies ---
+node_modules/
+
+# --- Environment / secrets ---
+.env
+.env.local
+.env.*.local
+
+# --- Build outputs ---
+dist/
+build/
+coverage/
+
+# --- Logs ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Misc ---
+*.pem
+*.key
+EOF

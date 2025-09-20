@@ -1,0 +1,44 @@
+{
+  "name": "electreeapp-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Auth-only API (register/login) for Electree app",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "genDatabaseSchema": "kysely-codegen --out-file src/db/types.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "kysely": "^0.28.7",
+    "morgan": "^1.10.1",
+    "mysql2": "^3.15.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.23",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^20.19.17",
+    "kysely-codegen": "^0.19.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2"
+  }
+}

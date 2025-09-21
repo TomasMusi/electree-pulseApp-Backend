@@ -31,6 +31,9 @@ app.use(rateLimit({ windowMs: 60_000, max: 120, standardHeaders: true }));
 app.use("/api/", loginRoutes); // Login Route
 
 
+// Testing Route
+app.get("/health", (_req, res) => res.json({ ok: true }));
+
 // Error Handler, musí byt jako posledni
 app.use(notFoundHandler);
 app.use(globalErrorHandler);

@@ -110,7 +110,6 @@ router.post("/register", async (req: Request, res: Response) => {
         res.json({
             status: "ok",
             message: "Data received",
-            data: { name, email, hashedPassword },
         });
     } catch (err) {
         console.error("Error hashing password:", err);

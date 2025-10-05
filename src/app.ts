@@ -4,10 +4,9 @@ import cors from "cors"; // Cross-Origin Resource Sharing
 import helmet from "helmet"; // Zabezpeceni HTTP hlavicky
 import morgan from "morgan"; // Logovani kazdeho requestu
 import rateLimit from "express-rate-limit"; // Omezuje pocet pozadavku z jedne IP, Zakladni ochrana proti BruteForce//DDOS
-import cookieParser from "cookie-parser"; // 
-import { METHODS } from "http";
 import { notFoundHandler, globalErrorHandler } from "./middleware/error"; // Error Handlers
 import loginRoutes from "./routes/auth.routes";
+import publicDataRoutes from "./routes/PublicData.routes"
 
 const app = express();
 
@@ -29,6 +28,7 @@ app.use(rateLimit({ windowMs: 60_000, max: 120, standardHeaders: true }));
 
 // Routy
 app.use("/api/", loginRoutes); // Login Route
+app.use("/api/", publicDataRoutes) // Public Data Route
 
 
 // Testing Route

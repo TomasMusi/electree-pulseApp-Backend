@@ -27,4 +27,7 @@ export const env = {
 
     // App
     PORT: parseInt(process.env.PORT || "4000", 10),
+
+    // API
+    API_URL: required("API_URL")
 };
